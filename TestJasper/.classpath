@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="lib/jrs-rest-java-client-6.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/jasperserver-dto-6.2.0.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/javax.ws.rs-api-2.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-client-2.22.1.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-common-2.22.1.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-guava-2.22.1.jar"/>
+	<classpathentry kind="lib" path="lib/osgi-resource-locator-1.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/hk2-api-2.4.0-b31.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-entity-filtering-2.22.1.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-media-json-jackson-2.22.1.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-jaxrs-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-mapper-asl-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-xc-1.9.2.jar"/>
+	<classpathentry kind="lib" path="lib/hk2-locator-2.4.0-b31.jar"/>
+	<classpathentry kind="lib" path="lib/hk2-utils-2.4.0-b31.jar"/>
+	<classpathentry kind="lib" path="lib/javax.inject-2.4.0-b31.jar"/>
+	<classpathentry kind="lib" path="lib/javax.annotation-api-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-multipart-1.19.jar"/>
+	<classpathentry kind="lib" path="lib/jul-to-slf4j-1.7.12.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.12.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-log4j12-1.7.12.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-annotations-2.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-databind-2.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-jaxrs-base-2.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-jaxrs-json-provider-2.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-module-jaxb-annotations-2.5.4.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

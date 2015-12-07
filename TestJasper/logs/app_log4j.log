@@ -1,0 +1,1152 @@
+2015-12-04 18:08:31,945 com.jaspersoft.jasperserver.jaxrs.client.core.RestClientConfiguration loadConfiguration - There is no version for JasperReportsServer or it isn't supported.
+java.lang.IllegalArgumentException: No enum constant com.jaspersoft.jasperserver.jaxrs.client.core.enums.JRSVersion.v6_2_0
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at com.jaspersoft.jasperserver.jaxrs.client.core.enums.JRSVersion.valueOf(JRSVersion.java:24)
+	at com.jaspersoft.jasperserver.jaxrs.client.core.RestClientConfiguration.loadConfiguration(RestClientConfiguration.java:119)
+	at jasper.test.RestClientUtil.initClient(RestClientUtil.java:24)
+	at jasper.test.UsersService.before(UsersService.java:14)
+	at jasper.test.Test.main(Test.java:9)
+2015-12-04 18:08:32,376 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 1 * Sending client request on thread main
+1 > POST http://localhost:8080/jasperserver/j_spring_security_check
+1 > Content-Type: application/x-www-form-urlencoded
+j_username=jasperadmin&j_password=jasperadmin
+
+2015-12-04 18:08:32,392 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 1 * Client response received on thread main
+1 < 302
+1 < Content-Length: 0
+1 < Date: Fri, 04 Dec 2015 16:08:32 GMT
+1 < Location: http://localhost:8080/jasperserver/loginsuccess.html;jsessionid=E25902CA969D10057E4B3D72C71674CA
+1 < P3P: CP="ALL"
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: userLocale=en_US;Expires=Sat, 5-Dec-2015 16:08:32 GMT;HttpOnly,JSESSIONID=E25902CA969D10057E4B3D72C71674CA; Path=/jasperserver/; HttpOnly
+
+2015-12-04 18:08:32,444 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 2 * Sending client request on thread main
+2 > PUT http://localhost:8080/jasperserver/rest_v2/users/test_user
+2 > Accept: application/json
+2 > Content-Type: application/json
+{"fullName":"John Doe","password":"test_password","emailAddress":"john.doe@email.net","externallyDefined":false,"enabled":true,"username":"test_user"}
+
+2015-12-04 18:08:32,456 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 2 * Client response received on thread main
+2 < 201
+2 < Cache-Control: private
+2 < Content-Type: application/json
+2 < Date: Fri, 04 Dec 2015 16:08:32 GMT
+2 < Expires: Thu, 01 Jan 1970 02:00:00 EET
+2 < P3P: CP="ALL"
+2 < Server: Apache-Coyote/1.1
+2 < Transfer-Encoding: chunked
+{"fullName":"John Doe","emailAddress":"john.doe@email.net","externallyDefined":false,"enabled":true,"username":"test_user","roles":[{"name":"ROLE_USER","externallyDefined":false}]}
+
+2015-12-04 18:08:32,482 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 3 * Sending client request on thread main
+3 > GET http://localhost:8080/jasperserver/exituser.html
+
+2015-12-04 18:08:32,517 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 3 * Client response received on thread main
+3 < 200
+3 < Cache-Control: private
+3 < Content-Language: en-US
+3 < Content-Type: text/html;charset=UTF-8
+3 < Date: Fri, 04 Dec 2015 16:08:32 GMT
+3 < Expires: Thu, 01 Jan 1970 02:00:00 EET
+3 < LoginRequested: true
+3 < P3P: CP="ALL"
+3 < Server: Apache-Coyote/1.1
+3 < Set-Cookie: userLocale=en_US;Expires=Sat, 5-Dec-2015 16:08:32 GMT;HttpOnly,JSESSIONID=C306A44906B1EE62D16B196D37B58214; Path=/jasperserver/; HttpOnly
+3 < Transfer-Encoding: chunked
+
+
+
+
+
+
+
+
+
+    
+    
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+    
+
+
+
+
+
+    
+    
+
+
+    
+    
+
+
+
+
+
+    
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+    <head>
+        <title>TIBCO Jaspersoft: Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!--
+        <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+        -->
+        <link rel="shortcut icon" href='/jasperserver/_themes/F49C913/images/favicon.ico' />
+
+        <!--
+            <link rel="shortcut icon" href="favicon.ico" />
+        -->
+        
+
+
+
+
+
+
+
+
+
+  
+
+
+<meta name = "viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+
+
+
+    
+    
+        <link rel="stylesheet" href="/jasperserver/themes/reset.css" type="text/css" media="screen">
+
+        <link rel="stylesheet" href="/jasperserver/themeMinimalCss.css" type="text/css" media="screen,print"/>
+
+        <!--[if IE 7.0]>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/overrides_ie7.css" type="text/css" media="screen"/>
+        <![endif]-->
+
+        <!--[if IE 8.0]>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/overrides_ie8.css" type="text/css" media="screen"/>
+        <![endif]-->
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/overrides_ie.css" type="text/css" media="screen"/>
+        <![endif]-->
+
+        <link rel="stylesheet" href="/jasperserver/commonMinimalCss.css" type="text/css" media="screen,print"/>
+
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/panel.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/menu.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/simpleColorPicker.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/webPageView.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/notifications.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/attributes.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/importExport.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/manageTenants.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/pagination.css" type="text/css" media="screen,print"/>
+
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/dashboard/designer.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/dashboard/viewer.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/dashboard/canvas.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/dashboard/toolbar.css" type="text/css" media="screen,print"/>
+
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/overrides_custom.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="/jasperserver/scripts/bower_components/jquery-ui/themes/redmond/jquery-ui-1.10.4-custom.css" type="text/css" media="screen">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var JRS = {};
+
+    var __jrsConfigs__ = {
+
+        i18n: {},
+        localContext: {},
+        isIPad: "",
+        contextPath: "/jasperserver",
+        publicFolderUri: "/public",
+        tempFolderUri: "/temp",
+        enableAccessibility: "true",
+        organizationId: "",
+        commonReportGeneratorsMetadata: [],
+        templatesFolderUri: '',
+        defaultTemplateUri: '',
+        advNotSelected: "ADH_162_NULL_SAVE_REPORT_SOURCE",
+        templateNotSelected: "ADH_162_NULL_SELECT_TEMPLATE_SOURCE",
+        calendar: {
+
+            userLocale: "en_US",
+
+            timepicker: {
+                timeText: 'Time:',
+                hourText: 'Hour',
+                minuteText: 'Minute',
+                secondText: 'Second',
+                currentText: 'Now',
+                closeText: 'Close',
+                timeFormat: 'HH:mm:ss',
+                dateFormat: 'yy-mm-dd',
+                separator:' '
+            },
+
+            i18n: {
+                bundledCalendarTimeFormat: 'HH:mm:ss',
+                bundledCalendarFormat: 'yy-mm-dd'
+            }
+        },
+
+        webHelpModuleState: {
+            contextMap: {"default":"100","bi_overview":"100","login":"150","legacy_dashboard":"200","ad_hoc":"300","domain":"500","search":"600","analysis":"700","admin":"800","repo":"900","dashboard":"1000"},
+            hostURL: 'http://help.jaspersoft.com/js-help-v6-en/',
+            pagePrefix: 'Default_CSH.htm#'
+        },
+
+        urlContext: "/jasperserver",
+        defaultSearchText: "",
+        serverIsNotResponding: "The server is slow or isn't responding. Confirm that you want to continue."
+    };
+
+    // dirty hack to get path to current theme
+    __jrsConfigs__.currentThemePath = "_themes/F49C913/theme.css".split("/").slice(0, -1).join("/");
+
+    __jrsConfigs__.isProVersion = "false" === "true" ? true : false;
+
+    __jrsConfigs__.userLocale = "en_US";
+
+    __jrsConfigs__.isFreeOrLimitedEdition = false;
+
+    //TODO: get it from the server
+    __jrsConfigs__.avaliableLocales = ["de", "en", "es", "fr", "it", "ja", "ro", "zh_TW", "zh_CN"];
+
+
+    __jrsConfigs__.localeSettings = {
+        locale: "en_US",
+        decimalSeparator: "" || ".",
+        groupingSeparator: "" || ",",
+        timeFormat: "HH:mm:ss",
+        dateFormat: "yy-mm-dd",
+        timestampSeparator: " "
+    };
+    //Heartbeat
+
+    __jrsConfigs__.heartbeatInitOptions = {
+        baseUrl: "/jasperserver",
+        showDialog: false,
+        sendClientInfo: false
+    };
+
+    
+        
+        
+            __jrsConfigs__.initAdditionalUIComponents = true;
+        
+    
+
+    
+    
+    
+
+    __jrsConfigs__.flowExecutionKey = "";
+
+    if (window.localStorage && window.localStorage.previousPageHash){
+        window.location.hash = window.localStorage.previousPageHash;
+        delete window.localStorage.previousPageHash;
+    }
+
+</script>
+
+
+
+
+
+        <meta name="noMenu" content="true">
+        <meta name="pageHeading" content="LOGIN PAGE"/>
+
+        
+
+    
+
+    
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+<script type="text/javascript" src="/jasperserver/optimized-scripts/bower_components/requirejs/require.js"></script>
+<script type="text/javascript" src="/jasperserver/optimized-scripts/require.config.js"></script>
+<script type="text/javascript">
+
+    require.config({
+        baseUrl: "/jasperserver/optimized-scripts"
+    });
+</script>
+
+
+<script type="text/javascript" src="/jasperserver/optimized-scripts/bower_components/jquery/dist/jquery.js"></script>
+
+
+    
+    <script type="text/javascript" src="/jasperserver/scripts/bower_components/prototype/dist/prototype.js"></script>
+
+    
+    <script type="text/javascript">
+        define("prototype", $);
+    </script>
+
+
+
+        
+        
+            
+            
+        
+
+        <script type="text/javascript">
+            require(["login.page"]);
+        </script>
+    </head>
+
+
+    
+    
+  
+
+    
+
+
+
+    <body id="loginPage" class="" js-stdnav="true" role="application" aria-label="Jasper reports server." aria-busy="true">
+    <div id="ariastatus" role="alert" aria-live="assertive" aria-label="Loading Jasper Reports server, please stand by."></div>
+    <!-- Internet Explorer Countermeasures.  This element is used to force DOM changes to cause user-agent logic to re-evaluate the DOM. -->
+    <div id="IECM" aria-hidden="true" style="display:block; height:0px; background-color:transparent;">&nbsp;&nbsp;&nbsp;</div>
+    <div id="banner" class="banner"...more...
+
+2015-12-07 09:33:49,816 com.jaspersoft.jasperserver.jaxrs.client.core.RestClientConfiguration loadConfiguration - There is no version for JasperReportsServer or it isn't supported.
+java.lang.IllegalArgumentException: No enum constant com.jaspersoft.jasperserver.jaxrs.client.core.enums.JRSVersion.v6_2_0
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at com.jaspersoft.jasperserver.jaxrs.client.core.enums.JRSVersion.valueOf(JRSVersion.java:24)
+	at com.jaspersoft.jasperserver.jaxrs.client.core.RestClientConfiguration.loadConfiguration(RestClientConfiguration.java:119)
+	at jasper.test.RestClientUtil.initClient(RestClientUtil.java:24)
+	at jasper.test.UsersService.before(UsersService.java:14)
+	at jasper.test.Test.main(Test.java:9)
+2015-12-07 09:33:50,269 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 1 * Sending client request on thread main
+1 > POST http://localhost:8080/jasperserver/j_spring_security_check
+1 > Content-Type: application/x-www-form-urlencoded
+j_username=jasperadmin&j_password=jasperadmin
+
+2015-12-07 09:33:50,283 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 1 * Client response received on thread main
+1 < 302
+1 < Content-Length: 0
+1 < Date: Mon, 07 Dec 2015 07:33:50 GMT
+1 < Location: http://localhost:8080/jasperserver/loginsuccess.html;jsessionid=B63E211DFFE7C231A4E47629F4E9E350
+1 < P3P: CP="ALL"
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: userLocale=en_US;Expires=Tue, 8-Dec-2015 07:33:50 GMT;HttpOnly,JSESSIONID=B63E211DFFE7C231A4E47629F4E9E350; Path=/jasperserver/; HttpOnly
+
+2015-12-07 09:33:50,340 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 2 * Sending client request on thread main
+2 > PUT http://localhost:8080/jasperserver/rest_v2/users/test_user
+2 > Accept: application/json
+2 > Content-Type: application/json
+{"fullName":"John Doe","password":"test_password","emailAddress":"john.doe@email.net","externallyDefined":false,"enabled":true,"username":"test_user"}
+
+2015-12-07 09:33:50,351 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 2 * Client response received on thread main
+2 < 200
+2 < Cache-Control: private
+2 < Content-Type: application/json
+2 < Date: Mon, 07 Dec 2015 07:33:50 GMT
+2 < Expires: Thu, 01 Jan 1970 02:00:00 EET
+2 < P3P: CP="ALL"
+2 < Server: Apache-Coyote/1.1
+2 < Transfer-Encoding: chunked
+{"fullName":"John Doe","emailAddress":"john.doe@email.net","externallyDefined":false,"enabled":true,"username":"test_user","roles":[{"name":"ROLE_USER","externallyDefined":false}]}
+
+2015-12-07 09:33:50,378 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 3 * Sending client request on thread main
+3 > GET http://localhost:8080/jasperserver/exituser.html
+
+2015-12-07 09:33:50,419 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 3 * Client response received on thread main
+3 < 200
+3 < Cache-Control: private
+3 < Content-Language: en-US
+3 < Content-Type: text/html;charset=UTF-8
+3 < Date: Mon, 07 Dec 2015 07:33:50 GMT
+3 < Expires: Thu, 01 Jan 1970 02:00:00 EET
+3 < LoginRequested: true
+3 < P3P: CP="ALL"
+3 < Server: Apache-Coyote/1.1
+3 < Set-Cookie: userLocale=en_US;Expires=Tue, 8-Dec-2015 07:33:50 GMT;HttpOnly,JSESSIONID=72F979E1A9DFE64B1FFA1128AC658599; Path=/jasperserver/; HttpOnly
+3 < Transfer-Encoding: chunked
+
+
+
+
+
+
+
+
+
+    
+    
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+    
+
+
+
+
+
+    
+    
+
+
+    
+    
+
+
+
+
+
+    
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+    <head>
+        <title>TIBCO Jaspersoft: Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!--
+        <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+        -->
+        <link rel="shortcut icon" href='/jasperserver/_themes/F49C913/images/favicon.ico' />
+
+        <!--
+            <link rel="shortcut icon" href="favicon.ico" />
+        -->
+        
+
+
+
+
+
+
+
+
+
+  
+
+
+<meta name = "viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+
+
+
+    
+    
+        <link rel="stylesheet" href="/jasperserver/themes/reset.css" type="text/css" media="screen">
+
+        <link rel="stylesheet" href="/jasperserver/themeMinimalCss.css" type="text/css" media="screen,print"/>
+
+        <!--[if IE 7.0]>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/overrides_ie7.css" type="text/css" media="screen"/>
+        <![endif]-->
+
+        <!--[if IE 8.0]>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/overrides_ie8.css" type="text/css" media="screen"/>
+        <![endif]-->
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/overrides_ie.css" type="text/css" media="screen"/>
+        <![endif]-->
+
+        <link rel="stylesheet" href="/jasperserver/commonMinimalCss.css" type="text/css" media="screen,print"/>
+
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/panel.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/menu.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/simpleColorPicker.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/webPageView.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/notifications.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/attributes.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/importExport.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/manageTenants.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/pagination.css" type="text/css" media="screen,print"/>
+
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/dashboard/designer.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/dashboard/viewer.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/dashboard/canvas.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/dashboard/toolbar.css" type="text/css" media="screen,print"/>
+
+        <link rel="stylesheet" href="/jasperserver/_themes/F49C913/overrides_custom.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="/jasperserver/scripts/bower_components/jquery-ui/themes/redmond/jquery-ui-1.10.4-custom.css" type="text/css" media="screen">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var JRS = {};
+
+    var __jrsConfigs__ = {
+
+        i18n: {},
+        localContext: {},
+        isIPad: "",
+        contextPath: "/jasperserver",
+        publicFolderUri: "/public",
+        tempFolderUri: "/temp",
+        enableAccessibility: "true",
+        organizationId: "",
+        commonReportGeneratorsMetadata: [],
+        templatesFolderUri: '',
+        defaultTemplateUri: '',
+        advNotSelected: "ADH_162_NULL_SAVE_REPORT_SOURCE",
+        templateNotSelected: "ADH_162_NULL_SELECT_TEMPLATE_SOURCE",
+        calendar: {
+
+            userLocale: "en_US",
+
+            timepicker: {
+                timeText: 'Time:',
+                hourText: 'Hour',
+                minuteText: 'Minute',
+                secondText: 'Second',
+                currentText: 'Now',
+                closeText: 'Close',
+                timeFormat: 'HH:mm:ss',
+                dateFormat: 'yy-mm-dd',
+                separator:' '
+            },
+
+            i18n: {
+                bundledCalendarTimeFormat: 'HH:mm:ss',
+                bundledCalendarFormat: 'yy-mm-dd'
+            }
+        },
+
+        webHelpModuleState: {
+            contextMap: {"default":"100","bi_overview":"100","login":"150","legacy_dashboard":"200","ad_hoc":"300","domain":"500","search":"600","analysis":"700","admin":"800","repo":"900","dashboard":"1000"},
+            hostURL: 'http://help.jaspersoft.com/js-help-v6-en/',
+            pagePrefix: 'Default_CSH.htm#'
+        },
+
+        urlContext: "/jasperserver",
+        defaultSearchText: "",
+        serverIsNotResponding: "The server is slow or isn't responding. Confirm that you want to continue."
+    };
+
+    // dirty hack to get path to current theme
+    __jrsConfigs__.currentThemePath = "_themes/F49C913/theme.css".split("/").slice(0, -1).join("/");
+
+    __jrsConfigs__.isProVersion = "false" === "true" ? true : false;
+
+    __jrsConfigs__.userLocale = "en_US";
+
+    __jrsConfigs__.isFreeOrLimitedEdition = false;
+
+    //TODO: get it from the server
+    __jrsConfigs__.avaliableLocales = ["de", "en", "es", "fr", "it", "ja", "ro", "zh_TW", "zh_CN"];
+
+
+    __jrsConfigs__.localeSettings = {
+        locale: "en_US",
+        decimalSeparator: "" || ".",
+        groupingSeparator: "" || ",",
+        timeFormat: "HH:mm:ss",
+        dateFormat: "yy-mm-dd",
+        timestampSeparator: " "
+    };
+    //Heartbeat
+
+    __jrsConfigs__.heartbeatInitOptions = {
+        baseUrl: "/jasperserver",
+        showDialog: false,
+        sendClientInfo: false
+    };
+
+    
+        
+        
+            __jrsConfigs__.initAdditionalUIComponents = true;
+        
+    
+
+    
+    
+    
+
+    __jrsConfigs__.flowExecutionKey = "";
+
+    if (window.localStorage && window.localStorage.previousPageHash){
+        window.location.hash = window.localStorage.previousPageHash;
+        delete window.localStorage.previousPageHash;
+    }
+
+</script>
+
+
+
+
+
+        <meta name="noMenu" content="true">
+        <meta name="pageHeading" content="LOGIN PAGE"/>
+
+        
+
+    
+
+    
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+<script type="text/javascript" src="/jasperserver/optimized-scripts/bower_components/requirejs/require.js"></script>
+<script type="text/javascript" src="/jasperserver/optimized-scripts/require.config.js"></script>
+<script type="text/javascript">
+
+    require.config({
+        baseUrl: "/jasperserver/optimized-scripts"
+    });
+</script>
+
+
+<script type="text/javascript" src="/jasperserver/optimized-scripts/bower_components/jquery/dist/jquery.js"></script>
+
+
+    
+    <script type="text/javascript" src="/jasperserver/scripts/bower_components/prototype/dist/prototype.js"></script>
+
+    
+    <script type="text/javascript">
+        define("prototype", $);
+    </script>
+
+
+
+        
+        
+            
+            
+        
+
+        <script type="text/javascript">
+            require(["login.page"]);
+        </script>
+    </head>
+
+
+    
+    
+  
+
+    
+
+
+
+    <body id="loginPage" class="" js-stdnav="true" role="application" aria-label="Jasper reports server." aria-busy="true">
+    <div id="ariastatus" role="alert" aria-live="assertive" aria-label="Loading Jasper Reports server, please stand by."></div>
+    <!-- Internet Explorer Countermeasures.  This element is used to force DOM changes to cause user-agent logic to re-evaluate the DOM. -->
+    <div id="IECM" aria-hidden="true" style="display:block; height:0px; background-color:transparent;">&nbsp;&nbsp;&nbsp;</div>
+    <div id="banner" class="banner"...more...
+
+2015-12-07 10:42:40,345 com.jaspersoft.jasperserver.jaxrs.client.core.RestClientConfiguration loadConfiguration - There is no version for JasperReportsServer or it isn't supported.
+java.lang.IllegalArgumentException: No enum constant com.jaspersoft.jasperserver.jaxrs.client.core.enums.JRSVersion.v6_2_0
+	at java.lang.Enum.valueOf(Enum.java:238)
+	at com.jaspersoft.jasperserver.jaxrs.client.core.enums.JRSVersion.valueOf(JRSVersion.java:24)
+	at com.jaspersoft.jasperserver.jaxrs.client.core.RestClientConfiguration.loadConfiguration(RestClientConfiguration.java:119)
+	at jasper.test.RestClientUtil.initClient(RestClientUtil.java:24)
+	at jasper.test.UsersService.before(UsersService.java:14)
+	at jasper.test.Test.main(Test.java:9)
+2015-12-07 10:42:40,832 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 1 * Sending client request on thread main
+1 > POST http://localhost:8082/jasperserver/j_spring_security_check
+1 > Content-Type: application/x-www-form-urlencoded
+j_username=jasperadmin&j_password=jasperadmin
+
+2015-12-07 10:42:40,849 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 1 * Client response received on thread main
+1 < 302
+1 < Content-Length: 0
+1 < Date: Mon, 07 Dec 2015 08:42:40 GMT
+1 < Location: http://localhost:8082/jasperserver/loginsuccess.html;jsessionid=1BA20FF2BE90702DB0ABCFFB1A48DADA
+1 < P3P: CP="ALL"
+1 < Server: Apache-Coyote/1.1
+1 < Set-Cookie: userLocale=en_US;Expires=Tue, 8-Dec-2015 08:42:40 GMT;HttpOnly,JSESSIONID=1BA20FF2BE90702DB0ABCFFB1A48DADA; Path=/jasperserver/; HttpOnly
+
+2015-12-07 10:42:40,920 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 2 * Sending client request on thread main
+2 > PUT http://localhost:8082/jasperserver/rest_v2/users/test_user
+2 > Accept: application/json
+2 > Content-Type: application/json
+{"fullName":"John Doe","password":"test_password","emailAddress":"john.doe@email.net","externallyDefined":false,"enabled":true,"username":"test_user"}
+
+2015-12-07 10:42:41,167 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 2 * Client response received on thread main
+2 < 201
+2 < Cache-Control: private
+2 < Content-Type: application/json
+2 < Date: Mon, 07 Dec 2015 08:42:40 GMT
+2 < Expires: Thu, 01 Jan 1970 02:00:00 EET
+2 < P3P: CP="ALL"
+2 < Server: Apache-Coyote/1.1
+2 < Transfer-Encoding: chunked
+{"fullName":"John Doe","emailAddress":"john.doe@email.net","externallyDefined":false,"enabled":true,"username":"test_user","roles":[{"name":"ROLE_USER","externallyDefined":false}]}
+
+2015-12-07 10:42:41,198 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 3 * Sending client request on thread main
+3 > GET http://localhost:8082/jasperserver/exituser.html
+
+2015-12-07 10:42:41,282 com.jaspersoft.jasperserver.jaxrs.client.core.SessionStorage log - 3 * Client response received on thread main
+3 < 200
+3 < Cache-Control: private
+3 < Content-Language: en-US
+3 < Content-Type: text/html;charset=UTF-8
+3 < Date: Mon, 07 Dec 2015 08:42:40 GMT
+3 < Expires: Thu, 01 Jan 1970 02:00:00 EET
+3 < LoginRequested: true
+3 < P3P: CP="ALL"
+3 < Server: Apache-Coyote/1.1
+3 < Set-Cookie: userLocale=en_US;Expires=Tue, 8-Dec-2015 08:42:41 GMT;HttpOnly,JSESSIONID=78E060C0516A17B8F250FBCB0D7743BC; Path=/jasperserver/; HttpOnly
+3 < Transfer-Encoding: chunked
+
+
+
+
+
+
+
+
+
+    
+    
+        <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+    
+
+
+
+
+
+    
+    
+
+
+    
+    
+
+
+
+
+
+    
+    
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+    <head>
+        <title>TIBCO Jaspersoft: Login</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <!--
+        <meta http-equiv="X-UA-Compatible" content="IE=8"/>
+        -->
+        <link rel="shortcut icon" href='/jasperserver/_themes/30ECBE33/images/favicon.ico' />
+
+        <!--
+            <link rel="shortcut icon" href="favicon.ico" />
+        -->
+        
+
+
+
+
+
+
+
+
+
+  
+
+
+<meta name = "viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+
+
+
+
+    
+    
+        <link rel="stylesheet" href="/jasperserver/themes/reset.css" type="text/css" media="screen">
+
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/theme.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/pages.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/containers.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/dialog.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/buttons.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/lists.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/controls.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/dataDisplays.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/pageSpecific.css" type="text/css" media="screen,print"/>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/dialogSpecific.css" type="text/css" media="screen,print"/>
+
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/forPrint.css" type="text/css" media="print"/>
+
+        <!--[if IE 7.0]>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/overrides_ie7.css" type="text/css" media="screen"/>
+        <![endif]-->
+
+        <!--[if IE 8.0]>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/overrides_ie8.css" type="text/css" media="screen"/>
+        <![endif]-->
+
+        <!--[if IE]>
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/overrides_ie.css" type="text/css" media="screen"/>
+        <![endif]-->
+        <link rel="stylesheet" href="/jasperserver/_themes/30ECBE33/overrides_custom.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="/jasperserver/scripts/bower_components/jquery-ui/themes/redmond/jquery-ui-1.10.4-custom.css" type="text/css" media="screen">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    var JRS = {};
+
+    var __jrsConfigs__ = {
+
+        i18n: {},
+        localContext: {},
+        isIPad: "",
+        contextPath: "/jasperserver",
+        publicFolderUri: "/public",
+        tempFolderUri: "/temp",
+        enableAccessibility: "true",
+        organizationId: "",
+        commonReportGeneratorsMetadata: [],
+        templatesFolderUri: '',
+        defaultTemplateUri: '',
+        advNotSelected: "ADH_162_NULL_SAVE_REPORT_SOURCE",
+        templateNotSelected: "ADH_162_NULL_SELECT_TEMPLATE_SOURCE",
+        calendar: {
+
+            userLocale: "en_US",
+
+            timepicker: {
+                timeText: 'Time:',
+                hourText: 'Hour',
+                minuteText: 'Minute',
+                secondText: 'Second',
+                currentText: 'Now',
+                closeText: 'Close',
+                timeFormat: 'HH:mm:ss',
+                dateFormat: 'yy-mm-dd',
+                separator:' '
+            },
+
+            i18n: {
+                bundledCalendarTimeFormat: 'HH:mm:ss',
+                bundledCalendarFormat: 'yy-mm-dd'
+            }
+        },
+
+        webHelpModuleState: {
+            contextMap: {"default":"100","bi_overview":"100","login":"150","legacy_dashboard":"200","ad_hoc":"300","domain":"500","search":"600","analysis":"700","admin":"800","repo":"900","dashboard":"1000"},
+            hostURL: 'http://help.jaspersoft.com/js-help-v6-en/',
+            pagePrefix: 'Default_CSH.htm#'
+        },
+
+        urlContext: "/jasperserver",
+        defaultSearchText: "",
+        serverIsNotResponding: "The server is slow or isn't responding. Confirm that you want to continue."
+    };
+
+    // dirty hack to get path to current theme
+    __jrsConfigs__.currentThemePath = "_themes/30ECBE33/theme.css".split("/").slice(0, -1).join("/");
+
+    __jrsConfigs__.isProVersion = "false" === "true" ? true : false;
+
+    __jrsConfigs__.userLocale = "en_US";
+
+    __jrsConfigs__.isFreeOrLimitedEdition = false;
+
+    //TODO: get it from the server
+    __jrsConfigs__.avaliableLocales = ["de", "en", "es", "fr", "it", "ja", "ro", "zh_TW", "zh_CN"];
+
+
+    __jrsConfigs__.localeSettings = {
+        locale: "en_US",
+        decimalSeparator: "" || ".",
+        groupingSeparator: "" || ",",
+        timeFormat: "HH:mm:ss",
+        dateFormat: "yy-mm-dd",
+        timestampSeparator: " "
+    };
+    //Heartbeat
+
+    __jrsConfigs__.heartbeatInitOptions = {
+        baseUrl: "/jasperserver",
+        showDialog: false,
+        sendClientInfo: false
+    };
+
+    
+        
+        
+            __jrsConfigs__.initAdditionalUIComponents = true;
+        
+    
+
+    
+    
+    
+
+    __jrsConfigs__.flowExecutionKey = "";
+
+    if (window.localStorage && window.localStorage.previousPageHash){
+        window.location.hash = window.localStorage.previousPageHash;
+        delete window.localStorage.previousPageHash;
+    }
+
+</script>
+
+
+
+
+
+        <meta name="noMenu" content="true">
+        <meta name="pageHeading" content="LOGIN PAGE"/>
+
+        
+
+    
+
+    
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+<script type="text/javascript" src="/jasperserver/scripts/bower_components/requirejs/require.js"></script>
+<script type="text/javascript" src="/jasperserver/scripts/require.config.js"></script>
+<script type="text/javascript">
+    require.config({
+        baseUrl: "/jasperserver/scripts"
+    });
+</script>
+
+
+<script type="text/javascript" src="/jasperserver/scripts/bower_components/jquery/dist/jquery.js"></script>
+
+
+
+
+        
+        
+
+        <script type="text/javascript">
+            require(["login.page"]);
+        </script>
+    </head>
+
+
+    
+    
+  
+
+    
+
+
+
+    <body id="loginPage" class="" js-stdnav="true" role="application" aria-label="Jasper reports server." aria-busy="true">
+    <div id="ariastatus" role="alert" aria-live="assertive" aria-label="Loading jasper-reports server web client, please stand by. "></div>
+    <!-- Internet Explorer Countermeasures.  This element is used to force DOM changes to cause user-agent logic to re-evaluate the DOM. -->
+    <div id="IECM" aria-hidden="true" style="display:block; height:0px; background-color:transparent;">&nbsp;&nbsp;&nbsp;</div>
+    <div id="banner" class="banner" style="">
+        <div id="systemMessageConsole" style="display:none">
+            <p id="systemMessage">Close</p>
+        </div>
+        <div id="logo" class="sectionLeft" aria-label="TIBCO logo" role="image"></div>
+        <div class="sectionLeft">
+            
+        </div>
+        <div class="sectionRight">
+            <div style="float:left;">
+                <ul id="metaLinks" class="horizontal" role="menubar" tabindex="3" aria-label="User Menu"><!-- FIXME i18n -->
+                    
+                    
+                    
+                    
+                </ul>
+            </div>
+            <div class="searchContainer" style="float:left;">
+                <!-- banner search -->
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<span id="globalSearch" class="control searchLockup...more...
+
